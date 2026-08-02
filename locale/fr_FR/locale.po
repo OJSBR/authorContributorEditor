@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Édition des contributeurs par l'auteur-e"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Redonne à l'auteur-e la possibilité de modifier la liste des auteur-e-s et contributeur-trice-s de sa propre soumission, comme dans OJS 3.3 et 3.4. Dans OJS 3.5, le panneau Contributeurs-trices est toujours en lecture seule pour l'auteur-e, même lorsque son groupe d'utilisateurs-trices a l'option « Autoriser la modification des métadonnées de la soumission » activée. Le plugiciel se contente de rétablir cette permission dans l'interface : la décision reste celle du paramétrage du groupe d'utilisateurs-trices et de l'affectation d'étape, exactement comme le noyau d'OJS le vérifie déjà côté serveur."

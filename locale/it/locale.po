@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Modifica degli autori da parte dell'autore"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Restituisce all'autore la possibilità di modificare l'elenco di autori e collaboratori della propria proposta, come in OJS 3.3 e 3.4. In OJS 3.5 il pannello Collaboratori è sempre in sola lettura per l'autore, anche quando il suo gruppo utenti ha attiva l'opzione «Consenti la modifica dei metadati della proposta». Il plugin si limita a ripristinare quel permesso nell'interfaccia: a decidere restano l'impostazione del gruppo utenti e l'assegnazione di fase, esattamente come il core di OJS già verifica sul server."

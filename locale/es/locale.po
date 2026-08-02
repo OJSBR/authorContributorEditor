@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Edición de la Autoría por el Autor/a"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Devuelve al autor/a la edición de la lista de autores/as y colaboradores/as de su propio envío, como en OJS 3.3 y 3.4. En OJS 3.5 el panel Colaboradores/as siempre es de solo lectura para el autor/a, incluso cuando su grupo de usuarios/as tiene marcada la opción «Permitir editar los metadatos del envío». El módulo solo restituye ese permiso en la interfaz: quien decide sigue siendo la configuración del grupo de usuarios/as y la asignación de etapa, tal como el núcleo de OJS ya comprueba en el servidor."

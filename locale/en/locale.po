@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Author Contributor Editor"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Gives authors back the ability to edit the contributor list of their own submissions, as in OJS 3.3 and 3.4. In OJS 3.5 the Contributors panel is always read-only for authors, even when their user group has “Allow to edit submission metadata” enabled. This plugin only restores that permission in the interface: what decides remains the user group setting and the stage assignment, exactly as OJS core already enforces on the server."

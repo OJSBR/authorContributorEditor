@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Beitragende durch Autor/in bearbeiten"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Gibt Autorinnen und Autoren die Bearbeitung der Liste der Beitragenden ihrer eigenen Einreichung zurück, wie in OJS 3.3 und 3.4. In OJS 3.5 ist der Bereich „Beitragende“ für Autor/innen stets schreibgeschützt, selbst wenn für ihre Benutzer/innengruppe die Option „Bearbeiten der Metadaten der Einreichung erlauben“ aktiviert ist. Das Plugin stellt lediglich diese Berechtigung in der Oberfläche wieder her: Maßgeblich bleiben die Einstellung der Benutzer/innengruppe und die Zuweisung zur Phase, genau wie der OJS-Kern es serverseitig bereits prüft."

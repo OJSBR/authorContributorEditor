@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Edição da Autoria pelo Autor"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Devolve ao autor a edição da lista de autores e colaboradores da própria submissão, como no OJS 3.3 e 3.4. No OJS 3.5 o painel Colaboradores fica sempre apenas de leitura para o autor, mesmo quando o grupo de utilizadores dele tem a opção “Permitir editar os metadados da submissão” assinalada. O plug-in apenas repõe essa permissão na interface: quem decide continua a ser a configuração do grupo de utilizadores e a atribuição de etapa, tal como o núcleo do OJS já verifica no servidor."
