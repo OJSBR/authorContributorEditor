@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: bg\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Редактор на сътрудниците за автора"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Връща на авторите възможността да редактират списъка със сътрудници на собствените си предложения, както в OJS 3.3 и 3.4. В OJS 3.5 панелът „Сътрудници“ винаги е само за четене за авторите, дори когато потребителската им група има включено „Разрешаване на редактиране на метаданните на предложението“. Тази приставка възстановява това разрешение единствено в интерфейса: решаващи остават настройката на потребителската група и назначението на етапа, точно както ядрото на OJS вече налага на сървъра."

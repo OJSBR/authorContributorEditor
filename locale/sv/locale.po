@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: sv\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Bidragsgivarredigering för författare"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Ger författare tillbaka möjligheten att redigera bidragsgivarlistan i sina egna bidrag, som i OJS 3.3 och 3.4. I OJS 3.5 är panelen Bidragsgivare alltid skrivskyddad för författare, även när deras användargrupp har ”Tillåt redigering av bidragets metadata” påslaget. Detta tillägg återställer bara den behörigheten i gränssnittet: avgörande är fortfarande användargruppens inställning och stegtilldelningen, precis som OJS-kärnan redan tillämpar på servern."

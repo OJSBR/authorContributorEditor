@@ -9,6 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
 
+
 msgid "plugins.generic.authorContributorEditor.displayName"
 msgstr "Edição da Autoria pelo Autor"
 

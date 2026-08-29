@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: tr\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Yazar için Katkıda Bulunan Düzenleyici"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Yazarlara, OJS 3.3 ve 3.4'te olduğu gibi kendi gönderilerinin katkıda bulunan listesini düzenleme olanağını geri verir. OJS 3.5'te Katkıda Bulunanlar paneli, kullanıcı grubunda “Gönderi üstverisinin düzenlenmesine izin ver” açık olsa bile yazarlar için her zaman salt okunurdur. Bu eklenti bu izni yalnızca arayüzde geri getirir: belirleyici olan yine kullanıcı grubu ayarı ve aşama ataması olup, OJS çekirdeğinin sunucuda zaten uyguladığı kuralların aynısıdır."

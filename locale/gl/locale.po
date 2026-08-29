@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: gl\n"
+
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Editor de colaboradores para a autoría"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Devólvelle á autoría a posibilidade de editar a lista de colaboradores dos seus propios envíos, como en OJS 3.3 e 3.4. En OJS 3.5 o panel de Colaboradores é sempre de só lectura para a autoría, mesmo cando o seu grupo de persoas usuarias ten activado «Permitir editar os metadatos do envío». Este complemento só restaura ese permiso na interface: o que decide segue a ser a configuración do grupo e a asignación de etapa, exactamente como o núcleo de OJS xa aplica no servidor."

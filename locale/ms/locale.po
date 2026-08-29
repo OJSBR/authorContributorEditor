@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ms\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Editor Penyumbang untuk Penulis"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Mengembalikan keupayaan penulis untuk menyunting senarai penyumbang bagi serahan mereka sendiri, seperti dalam OJS 3.3 dan 3.4. Dalam OJS 3.5, panel Penyumbang sentiasa baca sahaja bagi penulis, walaupun kumpulan pengguna mereka mengaktifkan “Benarkan menyunting metadata serahan”. Pemalam ini hanya memulihkan kebenaran itu pada antara muka: yang menentukan tetap tetapan kumpulan pengguna dan penugasan peringkat, betul-betul seperti yang teras OJS sudah kuatkuasakan pada pelayan."

@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: id\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Editor Kontributor untuk Penulis"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Mengembalikan kemampuan penulis untuk menyunting daftar kontributor pada naskah mereka sendiri, seperti pada OJS 3.3 dan 3.4. Pada OJS 3.5 panel Kontributor selalu hanya-baca bagi penulis, bahkan ketika grup penggunanya mengaktifkan “Izinkan menyunting metadata naskah”. Plugin ini hanya memulihkan izin tersebut di antarmuka: yang menentukan tetap pengaturan grup pengguna dan penugasan tahap, persis seperti yang sudah diterapkan inti OJS di server."

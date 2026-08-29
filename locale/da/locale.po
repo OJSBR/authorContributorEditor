@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: da\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Bidragyderredigering for forfattere"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Giver forfattere muligheden for at redigere bidragyderlisten på deres egne indsendelser tilbage, som i OJS 3.3 og 3.4. I OJS 3.5 er panelet Bidragydere altid skrivebeskyttet for forfattere, også når deres brugergruppe har “Tillad redigering af indsendelsens metadata” slået til. Dette plugin genskaber kun den tilladelse i grænsefladen: det afgørende er fortsat brugergruppens indstilling og trintildelingen, præcis som OJS-kernen allerede håndhæver på serveren."

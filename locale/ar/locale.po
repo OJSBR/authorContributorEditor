@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ar\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "محرّر المساهمين للمؤلف"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "يعيد للمؤلفين إمكانية تحرير قائمة المساهمين في طلباتهم، كما في OJS 3.3 و3.4. ففي OJS 3.5 تكون لوحة المساهمين للقراءة فقط دائماً بالنسبة للمؤلفين، حتى عندما تكون خاصية “السماح بتحرير البيانات الوصفية لطلب النشر” مفعّلة لمجموعة المستخدمين التي ينتمون إليها. ولا يفعل هذا الملحق سوى إعادة ذلك الإذن في الواجهة: أما ما يحسم الأمر فيبقى إعداد مجموعة المستخدمين وإسناد المرحلة، تماماً كما يفرضه نواة OJS على الخادم."

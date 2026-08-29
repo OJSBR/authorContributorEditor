@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ca\n"
+
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Editor de col·laboradors per a l'autor"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Retorna als autors la possibilitat d'editar la llista de col·laboradors de les seves pròpies trameses, com a l'OJS 3.3 i 3.4. A l'OJS 3.5 el tauler de col·laboradors sempre és de només lectura per als autors, fins i tot quan el seu grup d'usuaris té activat «Permet editar les metadades de la tramesa». Aquest connector només restaura aquest permís a la interfície: el que decideix continua sent la configuració del grup d'usuaris i l'assignació d'etapa, exactament com el nucli de l'OJS ja aplica al servidor."

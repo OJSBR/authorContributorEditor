@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: fi\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Kirjoittajan tekijäluettelon muokkain"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Palauttaa kirjoittajille mahdollisuuden muokata omien käsikirjoitustensa tekijäluetteloa, kuten OJS 3.3:ssa ja 3.4:ssä. OJS 3.5:ssä Tekijät-paneeli on kirjoittajille aina vain luettava, vaikka heidän käyttäjäryhmällään olisi käytössä ”Salli käsikirjoituksen metatietojen muokkaus”. Tämä lisäosa palauttaa oikeuden vain käyttöliittymään: ratkaisevaa on edelleen käyttäjäryhmän asetus ja vaiheeseen liittäminen, aivan kuten OJS-ydin jo valvoo palvelimella."

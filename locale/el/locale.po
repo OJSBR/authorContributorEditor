@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: el\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Επεξεργασία συνεισφερόντων από τον συγγραφέα"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Επιστρέφει στους συγγραφείς τη δυνατότητα να επεξεργάζονται τη λίστα συνεισφερόντων των δικών τους υποβολών, όπως στο OJS 3.3 και 3.4. Στο OJS 3.5 ο πίνακας Συνεισφέροντες είναι πάντα μόνο για ανάγνωση για τους συγγραφείς, ακόμη και όταν η ομάδα χρηστών τους έχει ενεργοποιημένο το «Να επιτρέπεται η επεξεργασία των μεταδεδομένων της υποβολής». Αυτό το πρόσθετο επαναφέρει το δικαίωμα μόνο στο περιβάλλον χρήσης: αυτό που κρίνει παραμένει η ρύθμιση της ομάδας χρηστών και η ανάθεση σταδίου, ακριβώς όπως ήδη επιβάλλει ο πυρήνας του OJS στον διακομιστή."

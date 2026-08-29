@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: sl\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Urejevalnik sodelujočih za avtorja"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Avtorjem vrne možnost urejanja seznama sodelujočih pri lastnih prijavah, kot v OJS 3.3 in 3.4. V OJS 3.5 je plošča Sodelujoči za avtorje vedno samo za branje, tudi kadar ima njihova uporabniška skupina vklopljeno »Dovoli urejanje metapodatkov prijave«. Ta vtičnik to dovoljenje obnovi le v vmesniku: odločilna ostajata nastavitev uporabniške skupine in dodelitev faze, natanko tako, kot jedro OJS že uveljavlja na strežniku."

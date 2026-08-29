@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: sr_Latn\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Uređivač saradnika za autora"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Vraća autorima mogućnost da uređuju listu saradnika sopstvenih priloga, kao u OJS 3.3 i 3.4. U OJS 3.5 panel Saradnici je za autore uvek samo za čitanje, čak i kada njihova korisnička grupa ima uključeno „Dozvoli uređivanje metapodataka priloga“. Ovaj dodatak vraća tu dozvolu samo u interfejsu: odlučujući ostaju podešavanje korisničke grupe i dodela faze, tačno onako kako jezgro OJS-a već sprovodi na serveru."

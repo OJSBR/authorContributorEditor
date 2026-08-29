@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: pl\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Edytor współtwórców dla autora"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Przywraca autorom możliwość edytowania listy współtwórców własnych zgłoszeń, tak jak w OJS 3.3 i 3.4. W OJS 3.5 panel Współtwórcy jest dla autorów zawsze tylko do odczytu, nawet gdy ich grupa użytkowników ma włączone „Zezwalaj na edycję metadanych zgłoszenia”. Ta wtyczka przywraca to uprawnienie wyłącznie w interfejsie: o wszystkim nadal decyduje ustawienie grupy użytkowników i przypisanie do etapu, dokładnie tak, jak rdzeń OJS już egzekwuje po stronie serwera."

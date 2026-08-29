@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: fr_CA\n"
+
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Éditeur des contributeurs pour l'auteur"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Redonne aux auteurs la possibilité de modifier la liste des contributeurs de leurs propres soumissions, comme dans OJS 3.3 et 3.4. Dans OJS 3.5, le panneau Contributeurs est toujours en lecture seule pour les auteurs, même lorsque leur groupe d'utilisateurs a l'option « Autoriser la modification des métadonnées de la soumission » activée. Ce module ne rétablit cette permission que dans l'interface : ce qui décide demeure le paramètre du groupe d'utilisateurs et l'assignation à l'étape, exactement comme le noyau d'OJS l'applique déjà sur le serveur."

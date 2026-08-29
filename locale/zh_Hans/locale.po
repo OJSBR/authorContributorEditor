@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: zh_Hans\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "作者的贡献者编辑器"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "让作者重新能够编辑自己投稿的贡献者列表，与 OJS 3.3 和 3.4 一致。在 OJS 3.5 中，即使作者所在用户组已启用“允许编辑投稿元数据”，贡献者面板对作者始终为只读。本插件仅在界面上恢复该权限：真正起决定作用的仍是用户组设置和阶段指派，与 OJS 内核在服务器端已有的判断完全一致。"

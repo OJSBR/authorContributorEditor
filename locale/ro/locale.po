@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ro\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Editor de contribuitori pentru autor"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Le redă autorilor posibilitatea de a edita lista de contribuitori a propriilor propuneri, ca în OJS 3.3 și 3.4. În OJS 3.5, panoul Contribuitori este întotdeauna doar în citire pentru autori, chiar și atunci când grupul lor de utilizatori are activat „Permite editarea metadatelor propunerii”. Acest modul restaurează permisiunea doar în interfață: decisive rămân setarea grupului de utilizatori și atribuirea etapei, exact așa cum nucleul OJS aplică deja pe server."

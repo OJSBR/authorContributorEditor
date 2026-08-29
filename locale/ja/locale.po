@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ja\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "著者による寄稿者編集"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "OJS 3.3 や 3.4 と同じように、著者が自分の投稿の寄稿者一覧を編集できるようにします。OJS 3.5 では、ユーザーグループで「投稿メタデータの編集を許可」が有効でも、寄稿者パネルは著者に対して常に読み取り専用です。このプラグインが元に戻すのは画面上の権限だけで、判断するのは従来どおりユーザーグループの設定とステージ割り当てであり、OJS 本体がサーバー側ですでに適用しているとおりです。"

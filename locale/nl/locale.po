@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: nl\n"
+
+
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Bijdragerbewerker voor auteurs"
+
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Geeft auteurs de mogelijkheid terug om de bijdragerlijst van hun eigen inzendingen te bewerken, zoals in OJS 3.3 en 3.4. In OJS 3.5 is het paneel Bijdragers voor auteurs altijd alleen-lezen, zelfs wanneer hun gebruikersgroep “Bewerken van metadata van de inzending toestaan” aan heeft staan. Deze plug-in herstelt die rechten alleen in de interface: bepalend blijven de instelling van de gebruikersgroep en de fasetoewijzing, precies zoals de OJS-kern al op de server afdwingt."

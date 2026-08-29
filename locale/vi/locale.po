@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: vi\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Trình sửa người đóng góp cho tác giả"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Trả lại cho tác giả khả năng chỉnh sửa danh sách người đóng góp trong bài nộp của chính họ, như ở OJS 3.3 và 3.4. Trong OJS 3.5, bảng Người đóng góp luôn ở chế độ chỉ đọc đối với tác giả, ngay cả khi nhóm người dùng của họ đã bật “Cho phép chỉnh sửa siêu dữ liệu bài nộp”. Trình cắm này chỉ khôi phục quyền đó ở giao diện: yếu tố quyết định vẫn là thiết lập của nhóm người dùng và việc phân công giai đoạn, đúng như lõi OJS đã áp dụng ở phía máy chủ."

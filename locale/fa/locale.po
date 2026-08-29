@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: fa\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "ویرایشگر مشارکت‌کنندگان برای نویسنده"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "توانایی ویرایش فهرست مشارکت‌کنندگانِ ارسال‌های خود را همچون OJS 3.3 و 3.4 به نویسندگان بازمی‌گرداند. در OJS 3.5 پنل مشارکت‌کنندگان برای نویسندگان همیشه فقط‌خواندنی است، حتی وقتی گروه کاربری آن‌ها گزینهٔ «اجازهٔ ویرایش فرادادهٔ ارسال» را فعال دارد. این افزونه تنها همان مجوز را در رابط کاربری بازمی‌گرداند: آنچه تعیین‌کننده است همچنان تنظیم گروه کاربری و تخصیص مرحله است، دقیقاً همان‌گونه که هستهٔ OJS از پیش در سرور اعمال می‌کند."

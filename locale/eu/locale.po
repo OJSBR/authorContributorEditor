@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: eu\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Egilearentzako laguntzaileen editorea"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Egileei beren bidalketen laguntzaile-zerrenda editatzeko aukera itzultzen die, OJS 3.3 eta 3.4n bezala. OJS 3.5en Laguntzaileak panela beti irakurtzeko soilik da egileentzat, nahiz eta beren erabiltzaile-taldeak «Bidalketaren metadatuak editatzea baimendu» gaituta izan. Plugin honek interfazean baino ez du baimen hori leheneratzen: erabakitzen duena erabiltzaile-taldearen ezarpena eta faseari esleitzea da, OJSren nukleoak zerbitzarian dagoeneko betearazten duen bezalaxe."

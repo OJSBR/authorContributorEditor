@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: mk\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Уредник на соработници за авторот"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Им ја враќа на авторите можноста да ја уредуваат листата на соработници на сопствените поднесоци, како во OJS 3.3 и 3.4. Во OJS 3.5 панелот Соработници е секогаш само за читање за авторите, дури и кога нивната корисничка група има вклучено „Дозволи уредување на метаподатоците на поднесокот“. Овој приклучок ја враќа таа дозвола само во интерфејсот: одлучувачки остануваат поставката на корисничката група и доделувањето на фазата, точно како што јадрото на OJS веќе спроведува на серверот."

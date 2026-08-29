@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: ru\n"
+
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.displayName"
+msgstr "Редактор списка авторов для автора"
+
+#, fuzzy
+msgid "plugins.generic.authorContributorEditor.description"
+msgstr "Возвращает авторам возможность редактировать список участников собственных подач, как в OJS 3.3 и 3.4. В OJS 3.5 панель «Участники» для авторов всегда доступна только для чтения, даже если в их группе пользователей включено «Разрешить редактировать метаданные подачи». Этот модуль восстанавливает это право только в интерфейсе: решающими остаются настройка группы пользователей и назначение на этап, ровно так, как ядро OJS уже проверяет на сервере."
