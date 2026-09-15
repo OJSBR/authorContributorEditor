@@ -1,10 +1,10 @@
 # Author Contributor Editor — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-1.0.0.1-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-1.0.0.2-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/authorContributorEditor/releases/download/1.0.0.1/authorContributorEditor-1.0.0.1.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/authorContributorEditor/releases/download/1.0.0.2/authorContributorEditor-1.0.0.2.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that gives authors back the ability to
 **edit the contributor list of their own submissions** — as in OJS 3.3 and 3.4 — whenever the
@@ -18,7 +18,7 @@ OJS core**.
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.0.1 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 1.0.0.2 |
 
 ## The problem
 
@@ -108,8 +108,9 @@ Distribution → ORCID** brings the typeable field back.
 
 ## Languages
 
-Plugin interface translated into **Portuguese (Brazil), Portuguese (Portugal), English, Spanish,
-French, Italian and German**.
+Plugin name and description in the **38 languages** of the PKP standard set (reviewed in
+English, Portuguese, Spanish, Catalan, Galician, French, Italian, German and Dutch; the others are
+marked for review).
 
 ## A note on upgrades
 
@@ -118,10 +119,38 @@ The behaviour this plugin corrects lives in the workflow configuration compiled 
 plugin becomes a no-op on its own — it never overwrites a `canEdit` that is already set — and can
 simply be disabled.
 
+## Tests
+
+- **PHPUnit** (`tests/*Test.php`, on `PKP\tests\PKPTestCase`): the class against the installed
+  PKP, the plugin found by PKP's plugin registry, the script added to the dashboard only, after
+  the core build and before the registry starts, the store extension filling in only a missing
+  flag, and the translations. From the OJS root:
+
+  ```bash
+  lib/pkp/lib/vendor/bin/phpunit --configuration lib/pkp/tests/phpunit.xml --no-coverage "$PWD/plugins/generic/authorContributorEditor/tests"
+  ```
+
+- **Cypress** (`cypress/tests/functional/AuthorContributorEditor.cy.js`, run by
+  [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on every push): enables the
+  plugin and checks the script is loaded once on the dashboard. Given an author account and two
+  of its submissions (`authorUser`, `authorPassword`, `editableSubmissionId`,
+  `lockedSubmissionId`), it also checks the author gets the contributor actions only where the
+  assignment allows metadata changes; it fails without the script, and when the script ignores
+  the permission.
+- Verified on OJS 3.5.0.3 with a temporary author and two submissions, removed after the run.
+
+Tests are kept in the repository and are not part of the release package.
+
 ## Credits & authorship
 
 - **Developed and maintained by** [OJSBR](https://ojsbr.com) — original plugin.
 - Distributed under the **GNU GPL v3**.
+
+## AI use
+
+Generative AI (Claude, by Anthropic) was used to write and run tests, improve the code and bring
+it in line with PKP standards. Every change is reviewed and tested by OJSBR, which is responsible
+for the published releases.
 
 ## Contributing
 
@@ -238,8 +267,9 @@ ORCID** devolve o campo digitável.
 
 ### Idiomas
 
-Interface do plugin traduzida em **português (Brasil), português (Portugal), inglês, espanhol,
-francês, italiano e alemão**.
+Nome e descrição do plugin nos **38 idiomas** do conjunto padrão da PKP (revisados em inglês,
+português, espanhol, catalão, galego, francês, italiano, alemão e holandês; os demais ficam marcados
+para revisão).
 
 ### Sobre atualizações
 
@@ -248,10 +278,31 @@ O comportamento que este plugin corrige está na configuração do fluxo de trab
 plugin vira inócuo sozinho — ele nunca sobrescreve um `canEdit` já definido — e pode simplesmente
 ser desativado.
 
+### Testes
+
+PHPUnit em `tests/` (sobre `PKP\tests\PKPTestCase`) e Cypress em `cypress/tests/functional/`
+(rodado pelo [pkp-github-actions](https://github.com/pkp/pkp-github-actions) a cada push), com o
+comando da seção em inglês. A suíte cobre a classe contra o PKP instalado, o plugin encontrado pelo
+registro de plugins, o script só no painel, depois do build do núcleo e antes de o registro
+iniciar, a extensão do store preenchendo só a flag ausente, e as traduções. O Cypress liga o plugin
+e confere o script carregado uma vez no painel; com uma conta de autor e duas submissões dela
+(`authorUser`, `authorPassword`, `editableSubmissionId`, `lockedSubmissionId`), confere que o autor
+só ganha as ações de contribuidores onde a designação permite alterar metadados (falha sem o script
+e quando o script ignora a permissão). Verificado no OJS 3.5.0.3 com um autor e duas submissões
+temporários, removidos depois da rodada.
+
+Os testes ficam no repositório e não fazem parte do pacote da release.
+
 ### Créditos e autoria
 
 - **Desenvolvido e mantido pela** [OJSBR](https://ojsbr.com) — plugin autoral.
 - Distribuído sob a **GNU GPL v3**.
+
+### Uso de IA
+
+Foi usada IA generativa (Claude, da Anthropic) para escrever e rodar testes, melhorar o código e
+alinhá-lo aos padrões da PKP. Toda mudança é revisada e testada pela OJSBR, que responde pelas
+releases publicadas.
 
 ### Licença
 
