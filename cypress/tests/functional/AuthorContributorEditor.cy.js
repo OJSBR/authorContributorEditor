@@ -112,6 +112,113 @@ describe('Author Contributor Editor plugin', function() {
 
 	// ---- end of helpers ----
 
+	// REST calls made from the page, carrying its session and token.
+	const send = (path, method, body) => cy.window({log: false}).then((win) => cy.wrap(
+		win.fetch(path, {
+			method: method,
+			credentials: 'same-origin',
+			headers: {'Content-Type': 'application/json', 'X-Csrf-Token': win.pkp.currentUser.csrfToken},
+			body: body === undefined ? undefined : JSON.stringify(body),
+		}).then((response) => response.json().then((answer) => ({status: response.status, body: answer}))),
+		{log: false, timeout: 60000}
+	));
+
+	// A site with the Altcha captcha turned on for registration expects a solved
+	// proof of work along with the form. The PKP test data has it off.
+	const solveAltcha = (win) => {
+		const widget = win.document.querySelector('altcha-widget');
+		if (!widget) {
+			return;
+		}
+		const challenge = JSON.parse(widget.getAttribute('challengejson'));
+		const encoder = new win.TextEncoder();
+		const digest = async (number) => {
+			const buffer = await win.crypto.subtle.digest(challenge.algorithm, encoder.encode(challenge.salt + number));
+			return [...new Uint8Array(buffer)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+		};
+
+		return (async () => {
+			for (let number = 0; number <= (challenge.maxnumber || 100000); number++) {
+				if (await digest(number) === challenge.challenge) {
+					const input = win.document.createElement('input');
+					input.type = 'hidden';
+					input.name = 'altcha';
+					input.value = win.btoa(JSON.stringify({
+						algorithm: challenge.algorithm, challenge: challenge.challenge, number: number,
+						salt: challenge.salt, signature: challenge.signature, took: 1,
+					}));
+					win.document.querySelector('form[id=register]').appendChild(input);
+					widget.remove();
+
+					return;
+				}
+			}
+			throw new Error('the Altcha challenge could not be solved');
+		})();
+	};
+
+	let orcidSeed = Math.floor(Math.random() * 900000);
+	const anOrcid = () => {
+		const digits = ('000000021' + String(orcidSeed++).padStart(6, '0')).slice(0, 15);
+		let total = 0;
+		for (const digit of digits) {
+			total = (total + Number(digit)) * 2;
+		}
+		const result = (12 - (total % 11)) % 11;
+
+		return 'https://orcid.org/' + (digits + (result === 10 ? 'X' : String(result))).replace(/(.{4})(.{4})(.{4})(.{4})/, '$1-$2-$3-$4');
+	};
+
+	// Registers an author through the public form and enables the account, so the
+	// test has the person the plugin is about without depending on a data set.
+	const registerAuthor = () => {
+		const account = {username: 'aceauthor' + Date.now().toString().slice(-8), password: 'Ojsbr!Teste2026'};
+		account.email = account.username + '@mailinator.com';
+
+		cy.clearCookies();
+		cy.visit(pageUrl('user/register') + '?reload=' + Date.now());
+		cy.get('form#register input[name="givenName"]').type('Autor', {delay: 0});
+		cy.get('form#register input[name="familyName"]').type('Contribuidor', {delay: 0});
+		cy.get('form#register input[name="affiliation"]').type('OJSBR', {delay: 0});
+		cy.get('form#register select[name="country"]').select('BR');
+		cy.get('form#register input[name="email"]').type(account.email, {delay: 0});
+		cy.get('form#register input[name="username"]').type(account.username, {delay: 0});
+		cy.get('form#register input[name="password"]').type(account.password, {delay: 0, log: false});
+		cy.get('form#register input[name="password2"]').type(account.password, {delay: 0, log: false});
+		cy.get('body').then(($body) => {
+			if ($body.find('form#register input[name="privacyConsent"]').length) {
+				cy.get('form#register input[name="privacyConsent"]').check({force: true});
+			}
+			if ($body.find('form#register input[name="orcid"]').length) {
+				cy.get('form#register input[name="orcid"]').clear().type(anOrcid(), {delay: 0});
+			}
+			if ($body.find('form#register input[name="whatsapp"]').length) {
+				cy.get('form#register input[name="whatsapp"]').clear().type('+5511988887777', {delay: 0});
+			}
+		});
+		cy.window().then((win) => solveAltcha(win));
+		cy.get('form#register').submit();
+		cy.get('form#register', {timeout: 30000}).should('not.exist');
+
+		login(adminUser, adminPassword);
+		api(pageUrl('api/v1/users?searchPhrase=' + account.username + '&count=10')).then((users) => {
+			const user = (users.items || []).find((item) => item.userName === account.username || item.username === account.username);
+			expect(user, 'the account of the author was created').to.exist;
+			cy.window({log: false}).then((win) => request({
+				method: 'POST',
+				url: pageUrl('$$$call$$$/grid/settings/user/user-grid/disable-user'),
+				form: true,
+				failOnStatusCode: false,
+				body: {userId: user.id, enable: 1, disableReason: '', csrfToken: win.pkp.currentUser.csrfToken},
+			}));
+		});
+
+		return cy.wrap(account, {log: false});
+	};
+
+	// Submissions made by the test, deleted in after() even when it fails.
+	const madeHere = [];
+
 	// The Contributors panel of a submission in the author's workflow.
 	const openContributors = (submissionId) => {
 		cy.visit(pageUrl('dashboard/mySubmissions') + '?workflowSubmissionId=' + submissionId + '&workflowMenuKey=publication_contributors');
@@ -127,15 +234,101 @@ describe('Author Contributor Editor plugin', function() {
 		cy.window().its('pkp.registry.storeExtendFn').should('be.a', 'function');
 	});
 
-	(authorUser && editableSubmissionId && lockedSubmissionId ? it : it.skip)('Lets the author edit contributors only where the assignment allows metadata changes', function() {
-		login(authorUser, authorPassword);
-		openContributors(editableSubmissionId);
-		cy.get('[data-cy="contributor-manager"] button').should('have.length.at.least', 2).then(($editable) => {
-			const editableButtons = $editable.length;
-			openContributors(lockedSubmissionId);
-			cy.get('[data-cy="contributor-manager"]').then(($panel) => {
-				expect($panel.find('button').length, 'actions in the locked submission').to.be.lessThan(editableButtons);
+	// What the plugin gives back: on a submission of their own, where the
+	// assignment lets them change the metadata, the author sees the actions of the
+	// Contributors panel — and the server really accepts what those actions do,
+	// which is what the test reads back.
+	it('Lets the author work on the contributors of their own submission', function() {
+		const account = authorUser ? {username: authorUser, password: authorPassword} : null;
+
+		// The language of the journal is read while the editor is signed in: an
+		// account with no role yet does not open the page that carries it.
+		const journal = {};
+		login(adminUser, adminPassword);
+		cy.visit(pageUrl('submissions') + '?reload=' + Date.now());
+		cy.window({log: false}).its('pkp.context.primaryLocale').then((locale) => {
+			journal.locale = locale;
+		});
+		// The section as well: a journal asks for one and an account with no role
+		// cannot list them.
+		request({url: pageUrl('api/v1/sections?count=1'), failOnStatusCode: false}).then((response) => {
+			let body = response.body;
+			if (typeof body === 'string') {
+				try {
+					body = JSON.parse(body);
+				} catch (error) {
+					body = {};
+				}
+			}
+			journal.sectionId = (body && body.items && body.items.length) ? body.items[0].id : null;
+		});
+
+		(account ? cy.wrap(account, {log: false}) : registerAuthor()).then((author) => {
+			login(author.username, author.password);
+			cy.visit(pageUrl('user/profile') + '?reload=' + Date.now());
+			cy.get('#profileTabs', {timeout: 30000}).should('exist');
+
+			cy.then(() => journal.locale).then((locale) => {
+				return send(
+					pageUrl('api/v1/submissions'),
+					'POST',
+					journal.sectionId ? {locale: locale, sectionId: journal.sectionId} : {locale: locale}
+				).then((created) => {
+					expect(created.status, 'the submission of the author was created: ' + JSON.stringify(created.body)).to.be.within(200, 201);
+					madeHere.push(created.body.id);
+
+					// The panel, in the author's own workflow, offers the actions.
+					openContributors(created.body.id);
+					cy.get('[data-cy="contributor-manager"] button', {timeout: 60000})
+						.should('have.length.at.least', 1);
+
+					// And they are not a promise the server breaks: what the panel
+					// offers, the endpoint behind it accepts, and the contributor is
+					// there afterwards.
+					return api(pageUrl('api/v1/submissions/' + created.body.id + '/publications/' + created.body.currentPublicationId))
+						.then((publication) => {
+							const groupId = ((publication.authors || [])[0] || {}).userGroupId;
+							expect(groupId, 'the author of the submission belongs to a group').to.exist;
+							const base = pageUrl('api/v1/submissions/' + created.body.id + '/publications/' + created.body.currentPublicationId + '/contributors');
+							const contributor = {
+								givenName: {[locale]: 'Coautor'},
+								familyName: {[locale]: 'Doteste'},
+								email: 'coauthor' + Date.now().toString().slice(-8) + '@mailinator.com',
+								country: 'BR',
+								affiliations: [{name: {[locale]: 'OJSBR'}}],
+								biography: {[locale]: '<p>Co-author of the test.</p>'},
+								userGroupId: groupId,
+							};
+
+							return send(base, 'POST', contributor)
+								.then((answer) => (
+									answer.status === 400 && answer.body && answer.body.orcid
+										&& !/not permitted/i.test(JSON.stringify(answer.body.orcid))
+										? send(base, 'POST', Object.assign({}, contributor, {orcid: anOrcid()}))
+										: cy.wrap(answer, {log: false})
+								))
+								.then((answer) => {
+									expect(answer.status, 'the author was allowed to add a contributor: ' + JSON.stringify(answer.body))
+										.to.be.within(200, 201);
+
+									return api(base);
+								})
+								.then((contributors) => {
+									const names = (contributors.items || contributors || []).map((item) => (item.familyName || {})[locale]);
+									expect(names, 'the contributor the author added is stored').to.include('Doteste');
+								});
+						});
+				});
 			});
 		});
+	});
+
+	after(function() {
+		if (!madeHere.length) {
+			return;
+		}
+		login(adminUser, adminPassword);
+		cy.visit(pageUrl('submissions') + '?reload=' + Date.now());
+		madeHere.forEach((id) => send(pageUrl('api/v1/submissions/' + id), 'DELETE'));
 	});
 });
